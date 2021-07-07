@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    color: white;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+
+#page {
+    display: flex;
+    align-items: center;
+}
+
+a,
+button {
+    color: white;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input,
+label,
+button {
+    width: 100%;
+}
+
+button {
+    display: block;
+    font-weight: 500;
+}
+
+
+/* Left Part */
+
+#left {
+    background: #181818;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100vh;
+    text-align: center;
+}
+
+.signin {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.signin .logo {
+    margin-bottom: 5vh;
+}
+
+.signin form {
+    width: 80%;
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+i {
+    color: white;
+    margin-right: 5px;
+    background: #ef4b38;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.signin h2 {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.signin label {
+    font-size: 0.9rem;
+}
+
+.signin input {
+    border: 1px solid #555555;
+    outline: none;
+    padding: 8px;
+    background: transparent;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.3rem;
+}
+
+.signin input:focus {
+    outline: 1px solid #f96816;
+}
+
+.links {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.container {
+    width: 60%;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    align-items: center;
+}
+
+.or hr {
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #aaa;
+}
+
+.or span {
+    color: lightgrey;
+    padding: 0.8rem;
+}
+
+footer {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.footer-links {
+    margin-top: 0.5rem;
+}
+
+footer a {
+    color: #f96816;
+}
+
+
+/* Right Part */
+
+#right {
+    background: url('/login-bg.jpg') no-repeat center center/cover;
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#right h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#right button {
+    width: 60%;
+}
+
+
+/* utilities */
+
+button {
+    padding: 12px 0px;
+}
+
+.bg-orange {
+    background: #f96816;
+}
+
+.bg-orange:hover {
+    background-color: #f96916e7;
+    transition-duration: 0.5s;
+}
+
+.bg-transparent {
+    background: transparent;
+    border: 1px solid white;
+}
+
+.bg-transparent:hover {
+    border: 1px solid #f96816;
+    color: #f96816;
+    transition-duration: 0.5s;
+}
+
+@media(min-width: 1200px) {
+    #left {
+        flex: 4;
+    }
+    #right {
+        flex: 6;
+    }
+}
+
+@media(max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    #right {
+        display: none;
+    }
+    #left {
+        justify-content: start;
+        padding-top: 5vh;
+    }
+    footer {
+        margin-top: 5vh;
+    }
+}
